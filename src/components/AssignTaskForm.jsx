@@ -27,7 +27,7 @@ function AssignTaskForm() {
         }
         if (e.target.value.length > 0) {
             try {
-                const response = await axios.post("http://localhost:4000/backend/task/search/employee",payload);
+                const response = await axios.post("https://task-manager-backend-alle.onrender.com/backend/task/search/employee",payload);
                 setEmployeeList(response.data.result);
             } catch (error) {
                 console.error('Error fetching employees:', error);
@@ -61,7 +61,7 @@ function AssignTaskForm() {
             assigned_by :  manager_details
         }
         try {
-            const response = await await axios.post("http://localhost:4000/backend/task/assign",payload);
+            const response = await await axios.post("https://task-manager-backend-alle.onrender.com/backend/task/assign",payload);
             if(response.status === 200){
                 alert("Assigned the Task Successfully")
                 return

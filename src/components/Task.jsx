@@ -37,7 +37,7 @@ const Task = ({ id, title, assignedBy, assignedOn, status, task_description,isMa
 
     try {
       // Make an API call to update the task status
-      const response = await axios.put(`http://localhost:4000/backend/task/change/status`, { task_id: id, status: newStatus });
+      const response = await axios.put(`https://task-manager-backend-alle.onrender.com/backend/task/change/status`, { task_id: id, status: newStatus });
       console.log('Status updated:', response.data);
     } catch (error) {
       console.error('Error updating status:', error);

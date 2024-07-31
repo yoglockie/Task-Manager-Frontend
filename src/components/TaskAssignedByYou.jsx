@@ -9,7 +9,7 @@ const TaskAssignedByYou = () => {
   useEffect(()=>{
      try {
       async function fetchTasks() {
-           const response = await axios.post("http://localhost:4000/backend/task/manager/fetch",{user_id});
+           const response = await axios.post("https://task-manager-backend-alle.onrender.com/backend/task/manager/fetch",{user_id});
            if(response.data){
               const task_list = response.data.tasks
               setTaskList(task_list);

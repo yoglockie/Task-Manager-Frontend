@@ -32,7 +32,7 @@ function Signup() {
       department
     }
     try {
-      const response = await axios.post("http://localhost:4000/backend/auth/signup",payload);
+      const response = await axios.post("https://task-manager-backend-alle.onrender.com/backend/auth/signup",payload);
       console.log(response);
       if(response.ok){
         const data = response.data.token
